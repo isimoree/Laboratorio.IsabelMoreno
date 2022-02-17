@@ -1,0 +1,27 @@
+h1{
+    text-align: center; 
+    color: blue;
+    text-shadow: 1px 1px 2px yellow;
+}
+fieldset{
+    background-color: cyan;
+    border: 0 ;
+    border-radius: 5px; 
+}
+legend{
+    background-color: red;
+    color: white;
+}
+.texto
+{
+    background-color: yellow;
+    border-color: yellow;
+    border-radius: 5px;
+}
+.boton{
+    background-color: lightpink;
+    border-color: lightpink;
+    border-radius: 5px;
+    height: 5%;
+    width: 6.3%;
+}   

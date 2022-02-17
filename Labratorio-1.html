@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+    <title>Formulario</title>
+    <head> 
+        <link rel="stylesheet" href="estilo.css">
+        <script type="text/javascript" src="funciones.js">
+        </script>   
+    </head>
+    <Body>
+        <h1>
+            Formulario Información Alta Telefónica
+        </h1>
+        <form id="formulario">
+            <fieldset>
+                <legend>
+                    Datos Personales
+                </legend>
+                Nombre:
+                    <input type="text" name="nombre" value="" class="texto" maxlength="30">
+                <br>    
+                 Apellidos:
+                    <input type="text" name="apellidos" value=""class="texto" maxlength="60">
+                <br>
+                Dirección:
+                    <input type="text" name="direccion" value=""class="texto" maxlength="60">
+                <br>    
+                 Código Postal:
+                    <input type="text" name="codigopostal" value=""class="texto" id="codpostal">
+                    <br>    
+                 Provincia:
+                    <input type="text" name="provincia" value="" class="texto" id="provincia" onblur="Comprobarcodpostal();"> 
+                    <p id="resultado"></p>   
+            </fieldset> 
+            <br>
+            <fieldset>
+                <legend>
+                    Tipo de Contratación
+                </legend>
+                <input type="radio" name="Tipo de Contratación" value=""  checked>Nueva Contratación &nbsp;&nbsp;
+                <input type="radio" name="Tipo de Contratación" value="">Portabilidd &nbsp; &nbsp;
+                <input type="radio" name="Tipo de Contratación" value="">Cambio de Contrato
+                <br>
+                <br>
+                Elija la compañia actual:
+                <select name="Compañia actual">
+                    <option>Movistar</option>
+                    <option>Orange</option>
+                    <option>Yoigo</option>
+                    <option>No Tengo Ninguna Compañia</option>
+                </select>
+                En caso de portabilidad, elija la nueva compañia 
+                <select name="Nueva Compañia">
+                    <option>Movistar</option>
+                    <option>Orange</option>
+                    <option>Yoigo</option>
+                </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>
+                    Datos Bancarios
+                </legend>
+                País:
+                <input type="text" name="País" value="ES" class="texto" disabled> (sólo válido ES)
+                <br>
+                Control IBAN:
+                <input type="number" name="ControlIBAN" value="" placeholder="XX" class="texto" minlength="2" maxlength="2" > (dos dígitos)
+                <br>
+                Entidad:
+                <input type="number" name="Entidad" value="" placeholder="XXXX" class="texto" minlenght= "4" maxlength="4" > (cuatro dígitos)
+                <br>
+                Sucursal:
+                <input type="number" name="Sucursal" value="" placeholder="XXXX" class="texto" maxlength="4" minlenght= "4" > (cuatro dígitos)
+                <br>
+                DC:
+                <input type="number" name="DC" value="" placeholder="XX" class="texto" minlenght= "2" maxlength="2"> (dos dígitos)
+                <br>
+                Cuenta:
+                <input type="number" name="Cuenta" value="" placeholder="XXXXXXXXXX" class="texto" > (diez dígitos)
+                <br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>
+                    Datos Estadísticos - ¿Cómo nos conoció?
+                </legend>
+                <input type="checkbox" name="Medio" value=""> A través de la TV
+                <br>
+                <input type="checkbox" name="Medio" value=""> A través de la radio
+                <br>
+                <input type="checkbox" name="Medio" value=""> A través de la internet
+                <br>
+                <input type="checkbox" name="Medio" value=""> Otros
+                <br>
+                <br>
+                <input type="range" name="valoración" value="" min="1" max="5"> Valoración [1-5]
+                <br>
+                <br>
+                Fecha de la Encuesta
+                <input type="date" name="fecha" value="2019-01-01">
+            </fieldset>
+                <button type="submit" >Enviar Datos</button>
+                <button type="reset">Borrar Datos</button>
+                <br>
+                <button type="button" class="boton"  onclick="MostrarValoracion(this.form.valoración.value);">Mostrar
+                    <br> Valoración</button>
+                <button type="button" class="boton" onclick="MostrarCuenta(this.form.País.value,this.form.ControlIBAN.value,this.form.Entidad.value,this.form.Sucursal.value,this.form.DC.value,this.form.Cuenta.value)">Mostrar
+                    <br> Cuenta</button>
+                <button type="button" class="boton" onclick="MostrarDia(this.form.fecha.value);">Mostrar Día
+                    <br> Semana</button>
+                 
+        </form>
+    </Body>
+
+
+
+
+
+
+</html>
+ 
